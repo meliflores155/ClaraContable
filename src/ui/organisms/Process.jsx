@@ -81,7 +81,7 @@ export default function Process() {
   return (
     <section id="proceso" style={{
       padding: '100px 0',
-      background: 'linear-gradient(180deg, #0a1628 0%, #101d33 50%, #0f1b2d 100%)',
+      background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
       position: 'relative',
       overflow: 'hidden',
     }}>
@@ -92,7 +92,7 @@ export default function Process() {
         left: 0,
         right: 0,
         bottom: 0,
-        backgroundImage: 'radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px)',
+        backgroundImage: 'radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px)',
         backgroundSize: '24px 24px',
         pointerEvents: 'none',
       }} />
@@ -106,7 +106,7 @@ export default function Process() {
         width: 600,
         height: 400,
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(232,119,34,0.06) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%)',
         pointerEvents: 'none',
         animation: 'breathe 8s ease-in-out infinite',
       }} />
@@ -149,7 +149,7 @@ export default function Process() {
         </h2>
 
         <p style={{
-          color: '#8a9bb5',
+          color: 'rgba(255,255,255,0.75)',
           fontSize: 18,
           maxWidth: 520,
           margin: '0 auto 56px',
@@ -173,8 +173,8 @@ export default function Process() {
             left: '10%',
             right: '10%',
             height: 3,
-            background: 'linear-gradient(90deg, #2563eb 0%, #f97316 100%)',
-            opacity: 0.3,
+            background: 'linear-gradient(90deg, rgba(255,255,255,0.4) 0%, #f97316 50%, rgba(255,255,255,0.4) 100%)',
+            opacity: 0.5,
             zIndex: 0,
             borderRadius: 2,
           }} />
@@ -236,7 +236,7 @@ export default function Process() {
                 }}>{step.title}</h3>
 
                 <p style={{
-                  color: '#8a9bb5',
+                  color: 'rgba(255,255,255,0.7)',
                   fontSize: 14,
                   lineHeight: 1.6,
                 }}>{step.desc}</p>
@@ -267,7 +267,7 @@ export default function Process() {
               marginBottom: 4,
             }}>¿Lista para empezar?</p>
             <p style={{
-              color: '#8a9bb5',
+              color: 'rgba(255,255,255,0.75)',
               fontSize: 15,
             }}>El primer paso es una conversación sin costo ni compromiso</p>
           </div>
