@@ -6,7 +6,7 @@ const INFO_CARDS = [
     text: 'Contadora Auditora, Universidad [por definir]',
     color: 'primary',
     icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#1a3a6e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
         <path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5" />
       </svg>
@@ -17,7 +17,7 @@ const INFO_CARDS = [
     text: 'Tributaria, pymes y personas naturales',
     color: 'primary',
     icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#1a3a6e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
         <path d="M12 16v-4" />
         <path d="M12 8h.01" />
@@ -50,7 +50,7 @@ const INFO_CARDS = [
 const COLOR_STYLES = {
   primary: {
     iconBg: 'linear-gradient(135deg, rgba(26,58,110,0.1) 0%, rgba(26,58,110,0.05) 100%)',
-    labelColor: '#1a3a6e',
+    labelColor: '#2563eb',
   },
   cta: {
     iconBg: 'linear-gradient(135deg, rgba(232,119,34,0.12) 0%, rgba(232,119,34,0.05) 100%)',
@@ -117,7 +117,7 @@ export default function About() {
               right: -12,
               bottom: -12,
               borderRadius: 24,
-              background: 'linear-gradient(135deg, #1a3a6e 0%, #e87722 100%)',
+              background: 'linear-gradient(135deg, #2563eb 0%, #e87722 100%)',
               opacity: 0.12,
             }} />
             <div style={{
@@ -190,7 +190,7 @@ export default function About() {
             alignItems: 'center',
             gap: 8,
             background: 'linear-gradient(135deg, rgba(26,58,110,0.08) 0%, rgba(26,58,110,0.04) 100%)',
-            color: '#1a3a6e',
+            color: '#2563eb',
             fontWeight: 700,
             fontSize: 13,
             textTransform: 'uppercase',
@@ -224,7 +224,7 @@ export default function About() {
             fontSize: 19,
             marginBottom: 8,
           }}>
-            <span style={{ color: '#1a3a6e' }}>Contadora Auditora</span>
+            <span style={{ color: '#2563eb' }}>Contadora Auditora</span>
             {' '}
             <span style={{ color: '#cbd5e0' }}>·</span>
             {' '}
@@ -235,7 +235,7 @@ export default function About() {
           <div style={{
             width: 60,
             height: 4,
-            background: 'linear-gradient(90deg, #1a3a6e 0%, #e87722 100%)',
+            background: 'linear-gradient(90deg, #2563eb 0%, #e87722 100%)',
             borderRadius: 2,
             marginBottom: 20,
           }} />

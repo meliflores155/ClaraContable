@@ -78,9 +78,9 @@ const SERVICES = [
 
 const COLOR_MAP = {
   primary: {
-    iconBg: 'linear-gradient(135deg, #1a3a6e 0%, #0f2a5c 100%)',
+    iconBg: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
     iconShadow: '0 4px 16px rgba(26,58,110,0.3)',
-    topLine: 'linear-gradient(90deg, #1a3a6e, #4a7fd4)',
+    topLine: 'linear-gradient(90deg, #2563eb, #4a7fd4)',
   },
   cta: {
     iconBg: 'linear-gradient(135deg, #e87722 0%, #d4691a 100%)',
@@ -95,7 +95,7 @@ export default function Services() {
   return (
     <section id="servicios" style={{
       padding: '90px 0',
-      background: 'linear-gradient(170deg, #0a1628 0%, #132744 50%, #0f2a5c 100%)',
+      background: 'linear-gradient(170deg, #0a1628 0%, #132744 50%, #1d4ed8 100%)',
       position: 'relative',
       overflow: 'hidden',
     }}>
@@ -106,7 +106,7 @@ export default function Services() {
         left: 0,
         right: 0,
         height: 4,
-        background: 'linear-gradient(90deg, #1a3a6e 0%, #e87722 50%, #1a3a6e 100%)',
+        background: 'linear-gradient(90deg, #2563eb 0%, #e87722 50%, #2563eb 100%)',
       }} />
 
       {/* Decorative elements - animated */}

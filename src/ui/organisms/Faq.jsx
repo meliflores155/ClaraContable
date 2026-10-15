@@ -76,7 +76,7 @@ export default function Faq() {
                   fontFamily: "'Poppins', sans-serif",
                   fontSize: 16,
                   fontWeight: 600,
-                  color: '#1a3a6e',
+                  color: '#2563eb',
                 }}>
                   {item.q}
                 </span>

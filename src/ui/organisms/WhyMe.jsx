@@ -50,7 +50,7 @@ export default function WhyMe() {
   return (
     <section id="porque" style={{
       padding: '96px 0',
-      background: 'linear-gradient(160deg, #0c1f3d 0%, #1a3a6e 50%, #0f2a5c 100%)',
+      background: 'linear-gradient(160deg, #1e3a5f 0%, #2563eb 50%, #1d4ed8 100%)',
       color: '#ffffff',
       position: 'relative',
       overflow: 'hidden',

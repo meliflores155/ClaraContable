@@ -6,7 +6,7 @@ export default function Hero() {
   const parallaxRef = useParallax(0.4)
   return (
     <section style={{
-      background: 'linear-gradient(135deg, #1a3a6e 0%, #0f2a5c 50%, #0a1f4a 100%)',
+      background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #0a1f4a 100%)',
       paddingTop: 140,
       paddingBottom: 80,
       position: 'relative',
@@ -181,7 +181,7 @@ export default function Hero() {
                   fontFamily: "'Poppins', sans-serif",
                   fontSize: 18,
                   fontWeight: 700,
-                  color: '#1a3a6e',
+                  color: '#2563eb',
                   marginBottom: 4,
                 }}>Resumen de abril</h3>
                 <p style={{ fontSize: 13, color: '#6b7280' }}>
@@ -189,7 +189,7 @@ export default function Hero() {
                 </p>
               </div>
               <span style={{
-                background: '#1a3a6e',
+                background: '#2563eb',
                 color: '#fff',
                 fontSize: 13,
                 fontWeight: 700,

@@ -13,7 +13,7 @@ export default function Footer() {
       {/* Top accent line */}
       <div style={{
         height: 4,
-        background: 'linear-gradient(90deg, #1a3a6e 0%, #e87722 50%, #1a3a6e 100%)',
+        background: 'linear-gradient(90deg, #2563eb 0%, #e87722 50%, #2563eb 100%)',
       }} />
 
       <div style={{

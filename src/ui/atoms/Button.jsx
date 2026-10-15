@@ -7,14 +7,14 @@ const variants = {
   },
   white: {
     background: '#fff',
-    color: '#1a3a6e',
+    color: '#2563eb',
     boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
     hoverShadow: '0 8px 28px rgba(0,0,0,0.12)',
   },
   outline: {
     background: 'transparent',
-    color: '#1a3a6e',
-    border: '2px solid #1a3a6e',
+    color: '#2563eb',
+    border: '2px solid #2563eb',
     boxShadow: 'none',
     hoverShadow: '0 4px 16px rgba(26,58,110,0.15)',
   },

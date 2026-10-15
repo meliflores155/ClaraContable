@@ -1,7 +1,7 @@
 // ─── Brand Colors ───────────────────────────────────────────
 export const COLORS = {
-  primary: '#1a3a6e',
-  primaryDark: '#0f2a5c',
+  primary: '#2563eb',
+  primaryDark: '#1d4ed8',
   primaryLight: '#2a4a7e',
   cta: '#e87722',
   ctaDark: '#d4691a',

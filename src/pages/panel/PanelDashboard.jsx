@@ -4,7 +4,7 @@ export default function PanelDashboard() {
       <h1 style={{
         fontFamily: "'Poppins', sans-serif",
         fontSize: 24,
-        color: '#1a3a6e',
+        color: '#2563eb',
         marginBottom: 8,
       }}>
         Dashboard

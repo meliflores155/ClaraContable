@@ -35,7 +35,7 @@ export default function Navbar() {
       {/* Shimmer accent line */}
       <div style={{
         height: 3,
-        background: 'linear-gradient(90deg, #1a3a6e, #e87722, #1a3a6e)',
+        background: 'linear-gradient(90deg, #2563eb, #e87722, #2563eb)',
         backgroundSize: '200% 100%',
         animation: 'shimmer 3s linear infinite',
       }} />
@@ -63,7 +63,7 @@ export default function Navbar() {
             width: 36,
             height: 36,
             borderRadius: 10,
-            background: 'linear-gradient(135deg, #1a3a6e, #2a4a7e)',
+            background: 'linear-gradient(135deg, #2563eb, #2a4a7e)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -72,7 +72,7 @@ export default function Navbar() {
             fontWeight: 800,
           }}>C</span>
           <span>
-            <span style={{ color: '#1a3a6e' }}>Clara</span>
+            <span style={{ color: '#2563eb' }}>Clara</span>
             <span style={{ color: '#e87722' }}>Contable</span>
           </span>
         </a>
@@ -112,7 +112,7 @@ export default function Navbar() {
             display: 'block',
             width: 24,
             height: 2.5,
-            background: '#1a3a6e',
+            background: '#2563eb',
             borderRadius: 2,
             transition: 'all 0.3s ease',
             transform: menuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none',
@@ -121,7 +121,7 @@ export default function Navbar() {
             display: 'block',
             width: 24,
             height: 2.5,
-            background: '#1a3a6e',
+            background: '#2563eb',
             borderRadius: 2,
             transition: 'all 0.3s ease',
             opacity: menuOpen ? 0 : 1,
@@ -130,7 +130,7 @@ export default function Navbar() {
             display: 'block',
             width: 24,
             height: 2.5,
-            background: '#1a3a6e',
+            background: '#2563eb',
             borderRadius: 2,
             transition: 'all 0.3s ease',
             transform: menuOpen ? 'rotate(-45deg) translate(5px, -5px)' : 'none',
@@ -191,7 +191,7 @@ function NavLink({ href, children }) {
         paddingBottom: 4,
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.color = '#1a3a6e'
+        e.currentTarget.style.color = '#2563eb'
         e.currentTarget.querySelector('.underline').style.width = '100%'
       }}
       onMouseLeave={(e) => {
@@ -206,7 +206,7 @@ function NavLink({ href, children }) {
         left: 0,
         width: 0,
         height: 2.5,
-        background: 'linear-gradient(90deg, #1a3a6e, #e87722)',
+        background: 'linear-gradient(90deg, #2563eb, #e87722)',
         borderRadius: 2,
         transition: 'width 0.3s cubic-bezier(0.4,0,0.2,1)',
       }} />

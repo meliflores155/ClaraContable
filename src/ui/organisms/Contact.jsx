@@ -116,7 +116,7 @@ export default function Contact() {
         left: 0,
         right: 0,
         height: 4,
-        background: 'linear-gradient(90deg, #1a3a6e 0%, #e87722 50%, #1a3a6e 100%)',
+        background: 'linear-gradient(90deg, #2563eb 0%, #e87722 50%, #2563eb 100%)',
       }} />
 
       {/* Decorative circles - animated */}

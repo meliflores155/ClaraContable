@@ -61,10 +61,10 @@ const STEPS = [
 
 const COLOR_MAP = {
   primary: {
-    iconBg: 'linear-gradient(135deg, #1a3a6e 0%, #0f2a5c 100%)',
+    iconBg: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
     iconShadow: '0 8px 24px rgba(26,58,110,0.4)',
     iconBorder: '3px solid rgba(255,255,255,0.1)',
-    badgeBg: '#1a3a6e',
+    badgeBg: '#2563eb',
   },
   cta: {
     iconBg: 'linear-gradient(135deg, #e87722 0%, #d4691a 100%)',
@@ -173,7 +173,7 @@ export default function Process() {
             left: '10%',
             right: '10%',
             height: 3,
-            background: 'linear-gradient(90deg, #1a3a6e 0%, #e87722 100%)',
+            background: 'linear-gradient(90deg, #2563eb 0%, #e87722 100%)',
             opacity: 0.3,
             zIndex: 0,
             borderRadius: 2,

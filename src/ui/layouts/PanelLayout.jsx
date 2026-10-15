@@ -12,7 +12,7 @@ export default function PanelLayout() {
         justifyContent: 'center',
         height: '100vh',
         fontFamily: "'Poppins', sans-serif",
-        color: '#1a3a6e',
+        color: '#2563eb',
       }}>
         Cargando...
       </div>
@@ -28,7 +28,7 @@ export default function PanelLayout() {
       {/* Sidebar will go here */}
       <aside style={{
         width: 260,
-        background: '#1a3a6e',
+        background: '#2563eb',
         color: '#fff',
         padding: '32px 20px',
         fontFamily: "'Poppins', sans-serif",

@@ -163,14 +163,14 @@ export default function Includes() {
                 left: 0,
                 right: 0,
                 height: 4,
-                background: 'linear-gradient(90deg, #1a3a6e, #e87722)',
+                background: 'linear-gradient(90deg, #2563eb, #e87722)',
               }} />
 
               {/* Icon */}
               <div style={{
                 width: 52,
                 height: 52,
-                background: 'linear-gradient(135deg, #1a3a6e 0%, #0f2a5c 100%)',
+                background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
                 borderRadius: 12,
                 display: 'flex',
                 alignItems: 'center',
@@ -206,7 +206,7 @@ export default function Includes() {
           textAlign: 'center',
           marginTop: 40,
           padding: '24px 32px',
-          background: 'linear-gradient(135deg, #1a3a6e 0%, #0f2a5c 100%)',
+          background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
           borderRadius: 12,
           color: '#ffffff',
         }}>

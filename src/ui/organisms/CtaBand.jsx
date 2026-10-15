@@ -44,7 +44,7 @@ export default function CtaBand() {
           href="#contacto"
           style={{
             background: '#ffffff',
-            color: '#1a3a6e',
+            color: '#2563eb',
             textDecoration: 'none',
             fontWeight: 700,
             padding: '16px 36px',

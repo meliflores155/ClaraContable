@@ -319,12 +319,12 @@ ul, ol {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1a3a6e;
+  background: #2563eb;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0f2a5c;
+  background: #1d4ed8;
 }
 
 /* ─── Reduce motion for accessibility ────────────────── */

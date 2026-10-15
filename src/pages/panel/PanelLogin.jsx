@@ -31,7 +31,7 @@ export default function PanelLogin() {
       alignItems: 'center',
       justifyContent: 'center',
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #1a3a6e 0%, #0f2a5c 100%)',
+      background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
       padding: 24,
     }}>
       <form onSubmit={handleSubmit} style={{
@@ -48,7 +48,7 @@ export default function PanelLogin() {
           textAlign: 'center',
           marginBottom: 8,
         }}>
-          <span style={{ color: '#1a3a6e' }}>Clara</span>
+          <span style={{ color: '#2563eb' }}>Clara</span>
           <span style={{ color: '#e87722' }}>Contable</span>
         </h1>
         <p style={{

@@ -5,7 +5,7 @@ export default function SectionTitle({ tag, title, subtitle, light = false, cent
         <span style={{
           display: 'inline-block',
           background: light ? 'rgba(255,255,255,0.12)' : 'rgba(26,58,110,0.08)',
-          color: light ? '#fff' : '#1a3a6e',
+          color: light ? '#fff' : '#2563eb',
           fontSize: 13,
           fontWeight: 600,
           padding: '6px 18px',
@@ -20,7 +20,7 @@ export default function SectionTitle({ tag, title, subtitle, light = false, cent
       <h2 style={{
         fontSize: 'clamp(28px, 4vw, 40px)',
         fontWeight: 800,
-        color: light ? '#fff' : '#1a3a6e',
+        color: light ? '#fff' : '#2563eb',
         marginBottom: subtitle ? 16 : 0,
         lineHeight: 1.15,
       }}>
