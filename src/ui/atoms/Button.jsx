@@ -1,6 +1,6 @@
 const variants = {
   cta: {
-    background: 'linear-gradient(135deg, #e87722, #f28c28)',
+    background: 'linear-gradient(135deg, #f97316, #f28c28)',
     color: '#fff',
     boxShadow: '0 8px 28px rgba(232,119,34,0.35)',
     hoverShadow: '0 12px 36px rgba(232,119,34,0.5)',

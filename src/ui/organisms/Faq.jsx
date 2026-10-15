@@ -82,7 +82,7 @@ export default function Faq() {
                 </span>
                 <span style={{
                   fontSize: 22,
-                  color: '#e87722',
+                  color: '#f97316',
                   fontWeight: 300,
                   transition: 'transform 0.3s ease',
                   transform: openIndex === i ? 'rotate(45deg)' : 'rotate(0)',

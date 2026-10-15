@@ -92,7 +92,7 @@ export default function Includes() {
           <div style={{
             display: 'inline-block',
             background: 'rgba(232,119,34,0.1)',
-            color: '#e87722',
+            color: '#f97316',
             fontWeight: 700,
             fontSize: 13,
             textTransform: 'uppercase',
@@ -163,7 +163,7 @@ export default function Includes() {
                 left: 0,
                 right: 0,
                 height: 4,
-                background: 'linear-gradient(90deg, #2563eb, #e87722)',
+                background: 'linear-gradient(90deg, #2563eb, #f97316)',
               }} />
 
               {/* Icon */}

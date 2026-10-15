@@ -4,7 +4,7 @@ export default function CtaBand() {
   const [ref, visible] = useScrollReveal()
   return (
     <section style={{
-      background: '#e87722',
+      background: '#f97316',
       padding: '56px 0',
       textAlign: 'center',
       position: 'relative',

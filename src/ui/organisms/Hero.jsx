@@ -68,7 +68,7 @@ export default function Hero() {
             marginBottom: 32,
             border: '1px solid rgba(255,255,255,0.1)',
           }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e87722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
               <circle cx="12" cy="10" r="3" />
             </svg>
@@ -85,7 +85,7 @@ export default function Hero() {
           }}>
             Tus impuestos al día y tu negocio{' '}
             <span style={{
-              background: 'linear-gradient(135deg, #e87722, #f5a623)',
+              background: 'linear-gradient(135deg, #f97316, #f5a623)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}>

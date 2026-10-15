@@ -98,7 +98,7 @@ export default function Testimonials() {
                   width: 44,
                   height: 44,
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #e87722, #f28c28)',
+                  background: 'linear-gradient(135deg, #f97316, #f28c28)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',

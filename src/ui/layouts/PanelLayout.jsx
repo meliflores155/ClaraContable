@@ -35,7 +35,7 @@ export default function PanelLayout() {
       }}>
         <h2 style={{ fontSize: 20, marginBottom: 40 }}>
           <span style={{ color: '#ffffff' }}>Clara</span>
-          <span style={{ color: '#e87722' }}>Contable</span>
+          <span style={{ color: '#f97316' }}>Contable</span>
         </h2>
         <nav>
           <p style={{ opacity: 0.7, fontSize: 14 }}>Panel de administración</p>

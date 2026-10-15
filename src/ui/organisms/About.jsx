@@ -29,7 +29,7 @@ const INFO_CARDS = [
     text: 'Contabilidad clara, sin letra chica',
     color: 'cta',
     icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#e87722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
         <circle cx="12" cy="12" r="3" />
       </svg>
@@ -40,7 +40,7 @@ const INFO_CARDS = [
     text: 'Directa, por WhatsApp y videollamada',
     color: 'cta',
     icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#e87722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
       </svg>
     ),
@@ -54,7 +54,7 @@ const COLOR_STYLES = {
   },
   cta: {
     iconBg: 'linear-gradient(135deg, rgba(232,119,34,0.12) 0%, rgba(232,119,34,0.05) 100%)',
-    labelColor: '#e87722',
+    labelColor: '#f97316',
   },
 }
 
@@ -117,7 +117,7 @@ export default function About() {
               right: -12,
               bottom: -12,
               borderRadius: 24,
-              background: 'linear-gradient(135deg, #2563eb 0%, #e87722 100%)',
+              background: 'linear-gradient(135deg, #2563eb 0%, #f97316 100%)',
               opacity: 0.12,
             }} />
             <div style={{
@@ -157,7 +157,7 @@ export default function About() {
               position: 'absolute',
               bottom: -16,
               right: -16,
-              background: 'linear-gradient(135deg, #e87722 0%, #d4691a 100%)',
+              background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
               color: '#ffffff',
               padding: '14px 20px',
               borderRadius: 14,
@@ -228,14 +228,14 @@ export default function About() {
             {' '}
             <span style={{ color: '#cbd5e0' }}>·</span>
             {' '}
-            <span style={{ color: '#e87722' }}>ClaraContable</span>
+            <span style={{ color: '#f97316' }}>ClaraContable</span>
           </p>
 
           {/* Accent line */}
           <div style={{
             width: 60,
             height: 4,
-            background: 'linear-gradient(90deg, #2563eb 0%, #e87722 100%)',
+            background: 'linear-gradient(90deg, #2563eb 0%, #f97316 100%)',
             borderRadius: 2,
             marginBottom: 20,
           }} />

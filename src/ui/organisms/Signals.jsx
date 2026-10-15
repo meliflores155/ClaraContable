@@ -112,7 +112,7 @@ export default function Signals() {
             gap: 8,
             background: 'rgba(232,119,34,0.1)',
             border: '1px solid rgba(232,119,34,0.25)',
-            color: '#e87722',
+            color: '#f97316',
             fontWeight: 700,
             fontSize: 14,
             textTransform: 'uppercase',
@@ -121,7 +121,7 @@ export default function Signals() {
             borderRadius: 999,
             marginBottom: 20,
           }}>
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#e87722" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#f97316" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="10" />
               <line x1="12" y1="8" x2="12" y2="12" />
               <line x1="12" y1="16" x2="12.01" y2="16" />
@@ -192,7 +192,7 @@ export default function Signals() {
                 flex: 'none',
                 width: 48,
                 height: 48,
-                background: 'linear-gradient(135deg, #e87722, #d4691a)',
+                background: 'linear-gradient(135deg, #f97316, #ea580c)',
                 borderRadius: 12,
                 display: 'flex',
                 alignItems: 'center',

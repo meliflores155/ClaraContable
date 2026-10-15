@@ -13,7 +13,7 @@ export default function Footer() {
       {/* Top accent line */}
       <div style={{
         height: 4,
-        background: 'linear-gradient(90deg, #2563eb 0%, #e87722 50%, #2563eb 100%)',
+        background: 'linear-gradient(90deg, #2563eb 0%, #f97316 50%, #2563eb 100%)',
       }} />
 
       <div style={{
@@ -41,7 +41,7 @@ export default function Footer() {
               display: 'inline-block',
               marginBottom: 16,
             }}>
-              Clara<span style={{ color: '#e87722' }}>Contable</span>
+              Clara<span style={{ color: '#f97316' }}>Contable</span>
             </a>
             <p style={{ lineHeight: 1.7, marginBottom: 24, color: '#7a8ba3' }}>
               Contabilidad e impuestos para pymes y emprendedores, explicados en simple. Te ayudo a ordenar tu negocio para que tú te dediques a hacerlo crecer.
@@ -97,7 +97,7 @@ export default function Footer() {
             <nav style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               {['Contabilidad completa', 'Declaración de impuestos', 'Inicio de actividades', 'Asesoría tributaria', 'Remuneraciones'].map((s) => (
                 <a key={s} href="#servicios" style={{ color: '#7a8ba3', textDecoration: 'none', fontSize: 14, transition: 'color 0.2s' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#e87722'}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#f97316'}
                   onMouseLeave={(e) => e.currentTarget.style.color = '#7a8ba3'}
                 >{s}</a>
               ))}
@@ -124,7 +124,7 @@ export default function Footer() {
                 { label: 'Contacto', href: '#contacto' },
               ].map((item) => (
                 <a key={item.label} href={item.href} style={{ color: '#7a8ba3', textDecoration: 'none', fontSize: 14, transition: 'color 0.2s' }}
-                  onMouseEnter={(e) => e.currentTarget.style.color = '#e87722'}
+                  onMouseEnter={(e) => e.currentTarget.style.color = '#f97316'}
                   onMouseLeave={(e) => e.currentTarget.style.color = '#7a8ba3'}
                 >{item.label}</a>
               ))}
@@ -146,7 +146,7 @@ export default function Footer() {
               {/* Phone */}
               <ContactItem
                 icon={
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e87722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
                   </svg>
                 }
@@ -157,7 +157,7 @@ export default function Footer() {
               {/* Email */}
               <ContactItem
                 icon={
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e87722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
@@ -169,7 +169,7 @@ export default function Footer() {
               {/* Location */}
               <ContactItem
                 icon={
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e87722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
@@ -234,7 +234,7 @@ function SocialIcon({ label, url, icon }) {
       onMouseEnter={(e) => {
         e.currentTarget.style.background = 'rgba(232,119,34,0.15)'
         e.currentTarget.style.borderColor = 'rgba(232,119,34,0.3)'
-        e.currentTarget.style.color = '#e87722'
+        e.currentTarget.style.color = '#f97316'
         e.currentTarget.style.transform = 'translateY(-3px)'
       }}
       onMouseLeave={(e) => {

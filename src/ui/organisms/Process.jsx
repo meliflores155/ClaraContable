@@ -67,10 +67,10 @@ const COLOR_MAP = {
     badgeBg: '#2563eb',
   },
   cta: {
-    iconBg: 'linear-gradient(135deg, #e87722 0%, #d4691a 100%)',
+    iconBg: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
     iconShadow: '0 8px 24px rgba(232,119,34,0.35)',
     iconBorder: '3px solid rgba(255,255,255,0.15)',
-    badgeBg: '#e87722',
+    badgeBg: '#f97316',
   },
 }
 
@@ -119,7 +119,7 @@ export default function Process() {
           alignItems: 'center',
           gap: 8,
           background: 'linear-gradient(135deg, rgba(232,119,34,0.2) 0%, rgba(232,119,34,0.08) 100%)',
-          color: '#e87722',
+          color: '#f97316',
           fontWeight: 700,
           fontSize: 13,
           textTransform: 'uppercase',
@@ -173,7 +173,7 @@ export default function Process() {
             left: '10%',
             right: '10%',
             height: 3,
-            background: 'linear-gradient(90deg, #2563eb 0%, #e87722 100%)',
+            background: 'linear-gradient(90deg, #2563eb 0%, #f97316 100%)',
             opacity: 0.3,
             zIndex: 0,
             borderRadius: 2,

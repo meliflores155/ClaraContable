@@ -49,7 +49,7 @@ export default function PanelLogin() {
           marginBottom: 8,
         }}>
           <span style={{ color: '#2563eb' }}>Clara</span>
-          <span style={{ color: '#e87722' }}>Contable</span>
+          <span style={{ color: '#f97316' }}>Contable</span>
         </h1>
         <p style={{
           textAlign: 'center',
@@ -121,7 +121,7 @@ export default function PanelLogin() {
           style={{
             width: '100%',
             padding: '14px',
-            background: 'linear-gradient(135deg, #e87722, #f28c28)',
+            background: 'linear-gradient(135deg, #f97316, #f28c28)',
             color: '#fff',
             fontFamily: "'Poppins', sans-serif",
             fontWeight: 700,

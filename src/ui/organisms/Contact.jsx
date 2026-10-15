@@ -34,7 +34,7 @@ const CONTACT_ITEMS = [
     isLink: false,
     iconBg: 'linear-gradient(135deg, rgba(232,119,34,0.15) 0%, rgba(232,119,34,0.05) 100%)',
     icon: (
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#e87722" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#f97316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
         <circle cx="12" cy="10" r="3" />
       </svg>
@@ -116,7 +116,7 @@ export default function Contact() {
         left: 0,
         right: 0,
         height: 4,
-        background: 'linear-gradient(90deg, #2563eb 0%, #e87722 50%, #2563eb 100%)',
+        background: 'linear-gradient(90deg, #2563eb 0%, #f97316 50%, #2563eb 100%)',
       }} />
 
       {/* Decorative circles - animated */}
@@ -161,7 +161,7 @@ export default function Contact() {
             justifyContent: 'center',
             width: 56,
             height: 56,
-            background: 'linear-gradient(135deg, #e87722 0%, #d4691a 100%)',
+            background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
             borderRadius: 16,
             marginBottom: 20,
             boxShadow: '0 4px 16px rgba(232,119,34,0.25)',
@@ -267,7 +267,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 style={inputStyle}
-                onFocus={(e) => e.currentTarget.style.borderColor = '#e87722'}
+                onFocus={(e) => e.currentTarget.style.borderColor = '#f97316'}
                 onBlur={(e) => e.currentTarget.style.borderColor = '#e2e8f0'}
               />
             </label>
@@ -280,7 +280,7 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 style={{ ...inputStyle, appearance: 'auto' }}
-                onFocus={(e) => e.currentTarget.style.borderColor = '#e87722'}
+                onFocus={(e) => e.currentTarget.style.borderColor = '#f97316'}
                 onBlur={(e) => e.currentTarget.style.borderColor = '#e2e8f0'}
               >
                 {SERVICE_OPTIONS.map((opt) => (
@@ -300,7 +300,7 @@ export default function Contact() {
                 value={form.message}
                 onChange={handleChange}
                 style={{ ...inputStyle, resize: 'vertical' }}
-                onFocus={(e) => e.currentTarget.style.borderColor = '#e87722'}
+                onFocus={(e) => e.currentTarget.style.borderColor = '#f97316'}
                 onBlur={(e) => e.currentTarget.style.borderColor = '#e2e8f0'}
               />
             </label>
@@ -308,7 +308,7 @@ export default function Contact() {
             <button
               type="submit"
               style={{
-                background: 'linear-gradient(135deg, #e87722 0%, #d4691a 100%)',
+                background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
                 color: '#ffffff',
                 font: "700 16px 'Inter', system-ui, sans-serif",
                 border: 0,

@@ -83,9 +83,9 @@ const COLOR_MAP = {
     topLine: 'linear-gradient(90deg, #2563eb, #4a7fd4)',
   },
   cta: {
-    iconBg: 'linear-gradient(135deg, #e87722 0%, #d4691a 100%)',
+    iconBg: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
     iconShadow: '0 4px 16px rgba(232,119,34,0.3)',
-    topLine: 'linear-gradient(90deg, #e87722, #f5a623)',
+    topLine: 'linear-gradient(90deg, #f97316, #f5a623)',
   },
 }
 
@@ -106,7 +106,7 @@ export default function Services() {
         left: 0,
         right: 0,
         height: 4,
-        background: 'linear-gradient(90deg, #2563eb 0%, #e87722 50%, #2563eb 100%)',
+        background: 'linear-gradient(90deg, #2563eb 0%, #f97316 50%, #2563eb 100%)',
       }} />
 
       {/* Decorative elements - animated */}
@@ -136,7 +136,7 @@ export default function Services() {
             justifyContent: 'center',
             width: 60,
             height: 60,
-            background: 'linear-gradient(135deg, #e87722 0%, #d4691a 100%)',
+            background: 'linear-gradient(135deg, #f97316 0%, #ea580c 100%)',
             borderRadius: 18,
             marginBottom: 22,
             boxShadow: '0 6px 24px rgba(232,119,34,0.3)',

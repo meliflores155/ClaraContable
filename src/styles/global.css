@@ -305,7 +305,7 @@ ul, ol {
 .typing-cursor::after {
   content: '|';
   animation: blink 0.8s infinite;
-  color: #e87722;
+  color: #f97316;
   font-weight: 300;
 }
 
