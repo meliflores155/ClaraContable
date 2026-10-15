@@ -1,6 +1,8 @@
 import { CONTACT, SOCIAL } from '../../config/constants'
+import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 export default function Footer() {
+  const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.1 })
   return (
     <footer style={{
       background: 'linear-gradient(180deg, #0a1628 0%, #0f1b2d 100%)',
@@ -21,7 +23,7 @@ export default function Footer() {
         boxSizing: 'border-box',
       }}>
         {/* Grid */}
-        <div className="footer-grid" style={{
+        <div ref={gridRef} className={`footer-grid reveal-stagger ${gridVisible ? 'visible' : ''}`} style={{
           display: 'grid',
           gridTemplateColumns: '1.4fr 0.8fr 0.8fr 1fr',
           gap: 48,

@@ -1,4 +1,5 @@
 import SectionTitle from '../atoms/SectionTitle'
+import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const TESTIMONIALS = [
   {
@@ -22,20 +23,38 @@ const TESTIMONIALS = [
 ]
 
 export default function Testimonials() {
+  const [headerRef, headerVisible] = useScrollReveal()
+  const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.1 })
   return (
     <section id="testimonios" style={{
       padding: '96px 0',
       background: 'linear-gradient(135deg, #1a3a6e 0%, #0f2a5c 100%)',
+      position: 'relative',
+      overflow: 'hidden',
     }}>
-      <div className="container">
+      {/* Decorative circles */}
+      <div style={{
+        position: 'absolute', top: -80, left: -80, width: 300, height: 300, borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(232,119,34,0.06) 0%, transparent 70%)', pointerEvents: 'none',
+        animation: 'expandCircle 10s ease-in-out infinite',
+      }} />
+      <div style={{
+        position: 'absolute', bottom: -60, right: -60, width: 250, height: 250, borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 70%)', pointerEvents: 'none',
+        animation: 'driftUp 11s ease-in-out infinite 2s',
+      }} />
+
+      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+        <div ref={headerRef} className={`reveal ${headerVisible ? 'visible' : ''}`}>
         <SectionTitle
           tag="Testimonios"
           title="Lo que dicen mis clientes"
           subtitle="La confianza de mis clientes es mi mejor carta de presentación."
           light
         />
+        </div>
 
-        <div style={{
+        <div ref={gridRef} className={`reveal-stagger ${gridVisible ? 'visible' : ''}`} style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: 24,

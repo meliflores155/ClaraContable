@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { CONTACT } from '../../config/constants'
+import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const CONTACT_ITEMS = [
   {
@@ -86,6 +87,8 @@ const labelStyle = {
 }
 
 export default function Contact() {
+  const [leftRef, leftVisible] = useScrollReveal()
+  const [formRef, formVisible] = useScrollReveal()
   const [form, setForm] = useState({ name: '', service: '', message: '' })
 
   const handleChange = (e) => {
@@ -116,7 +119,7 @@ export default function Contact() {
         background: 'linear-gradient(90deg, #1a3a6e 0%, #e87722 50%, #1a3a6e 100%)',
       }} />
 
-      {/* Decorative circles */}
+      {/* Decorative circles - animated */}
       <div style={{
         position: 'absolute',
         top: 60,
@@ -126,6 +129,7 @@ export default function Contact() {
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(232,119,34,0.06) 0%, transparent 70%)',
         pointerEvents: 'none',
+        animation: 'expandCircle 9s ease-in-out infinite',
       }} />
       <div style={{
         position: 'absolute',
@@ -136,6 +140,7 @@ export default function Contact() {
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(26,58,110,0.08) 0%, transparent 70%)',
         pointerEvents: 'none',
+        animation: 'driftUp 11s ease-in-out infinite 2s',
       }} />
 
       <div className="contact-layout" style={{
@@ -148,7 +153,7 @@ export default function Contact() {
         alignItems: 'flex-start',
       }}>
         {/* Left column: title + contact info */}
-        <div className="contact-left" style={{ flex: '0 0 380px', paddingTop: 4 }}>
+        <div ref={leftRef} className={`contact-left reveal-left ${leftVisible ? 'visible' : ''}`} style={{ flex: '0 0 380px', paddingTop: 4 }}>
           {/* Icon box */}
           <div style={{
             display: 'inline-flex',
@@ -229,7 +234,7 @@ export default function Contact() {
         </div>
 
         {/* Right column: form */}
-        <div style={{ flex: 1, minWidth: 0 }}>
+        <div ref={formRef} className={`reveal-right ${formVisible ? 'visible' : ''}`} style={{ flex: 1, minWidth: 0 }}>
           <form onSubmit={handleSubmit} style={{
             background: '#ffffff',
             borderRadius: 18,

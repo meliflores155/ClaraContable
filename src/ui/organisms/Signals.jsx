@@ -1,4 +1,5 @@
 import Button from '../atoms/Button'
+import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const SIGNALS = [
   {
@@ -69,6 +70,8 @@ const SIGNALS = [
 ]
 
 export default function Signals() {
+  const [headerRef, headerVisible] = useScrollReveal()
+  const [cardsRef, cardsVisible] = useScrollReveal({ threshold: 0.1 })
   return (
     <section style={{
       padding: '88px 0',
@@ -76,7 +79,7 @@ export default function Signals() {
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Decorative elements */}
+      {/* Decorative elements - animated */}
       <div style={{
         position: 'absolute',
         top: -80,
@@ -86,6 +89,7 @@ export default function Signals() {
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(232,119,34,0.06) 0%, transparent 70%)',
         pointerEvents: 'none',
+        animation: 'expandCircle 10s ease-in-out infinite',
       }} />
       <div style={{
         position: 'absolute',
@@ -96,11 +100,12 @@ export default function Signals() {
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(26,58,110,0.06) 0%, transparent 70%)',
         pointerEvents: 'none',
+        animation: 'driftUp 12s ease-in-out infinite 2s',
       }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 56 }}>
+        <div ref={headerRef} className={`reveal ${headerVisible ? 'visible' : ''}`} style={{ textAlign: 'center', marginBottom: 56 }}>
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -150,7 +155,7 @@ export default function Signals() {
         </div>
 
         {/* Cards */}
-        <div style={{
+        <div ref={cardsRef} className={`reveal-stagger ${cardsVisible ? 'visible' : ''}`} style={{
           display: 'flex',
           flexWrap: 'wrap',
           gap: 20,

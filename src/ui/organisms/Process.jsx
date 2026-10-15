@@ -1,4 +1,5 @@
 import Button from '../atoms/Button'
+import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const STEPS = [
   {
@@ -74,6 +75,9 @@ const COLOR_MAP = {
 }
 
 export default function Process() {
+  const [headerRef, headerVisible] = useScrollReveal()
+  const [stepsRef, stepsVisible] = useScrollReveal({ threshold: 0.1 })
+  const [ctaRef, ctaVisible] = useScrollReveal()
   return (
     <section id="proceso" style={{
       padding: '100px 0',
@@ -93,7 +97,7 @@ export default function Process() {
         pointerEvents: 'none',
       }} />
 
-      {/* Decorative glow */}
+      {/* Decorative glow - animated */}
       <div style={{
         position: 'absolute',
         top: '50%',
@@ -104,10 +108,12 @@ export default function Process() {
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(232,119,34,0.06) 0%, transparent 70%)',
         pointerEvents: 'none',
+        animation: 'breathe 8s ease-in-out infinite',
       }} />
 
       <div className="container" style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}>
         {/* Header */}
+        <div ref={headerRef} className={`reveal ${headerVisible ? 'visible' : ''}`} style={{ display: 'inline-block' }}>
         <div style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -150,9 +156,10 @@ export default function Process() {
         }}>
           Un proceso simple y transparente para que tu contabilidad esté siempre al día
         </p>
+        </div>
 
         {/* Timeline steps */}
-        <div className="process-timeline" style={{
+        <div ref={stepsRef} className={`process-timeline reveal-stagger ${stepsVisible ? 'visible' : ''}`} style={{
           display: 'flex',
           flexWrap: 'nowrap',
           gap: 0,
@@ -239,7 +246,7 @@ export default function Process() {
         </div>
 
         {/* Bottom CTA */}
-        <div style={{
+        <div ref={ctaRef} className={`reveal-scale ${ctaVisible ? 'visible' : ''}`} style={{
           marginTop: 56,
           padding: '28px 40px',
           background: 'rgba(255,255,255,0.04)',

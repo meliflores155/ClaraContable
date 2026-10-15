@@ -1,4 +1,5 @@
 import Button from '../atoms/Button'
+import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const SERVICES = [
   {
@@ -89,6 +90,8 @@ const COLOR_MAP = {
 }
 
 export default function Services() {
+  const [headerRef, headerVisible] = useScrollReveal()
+  const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.1 })
   return (
     <section id="servicios" style={{
       padding: '90px 0',
@@ -106,24 +109,27 @@ export default function Services() {
         background: 'linear-gradient(90deg, #1a3a6e 0%, #e87722 50%, #1a3a6e 100%)',
       }} />
 
-      {/* Decorative elements */}
+      {/* Decorative elements - animated */}
       <div style={{
         position: 'absolute', top: 80, right: -100, width: 400, height: 400, borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(232,119,34,0.08) 0%, transparent 70%)', pointerEvents: 'none',
+        animation: 'expandCircle 10s ease-in-out infinite',
       }} />
       <div style={{
         position: 'absolute', bottom: -80, left: -80, width: 350, height: 350, borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(26,58,110,0.15) 0%, transparent 70%)', pointerEvents: 'none',
+        animation: 'driftUp 12s ease-in-out infinite 2s',
       }} />
       <div style={{
         position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)',
         width: 600, height: 600, borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(232,119,34,0.04) 0%, transparent 60%)', pointerEvents: 'none',
+        animation: 'breathe 9s ease-in-out infinite',
       }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 56 }}>
+        <div ref={headerRef} className={`reveal ${headerVisible ? 'visible' : ''}`} style={{ textAlign: 'center', marginBottom: 56 }}>
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -166,7 +172,7 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div className="services-grid" style={{
+        <div ref={gridRef} className={`services-grid reveal-stagger ${gridVisible ? 'visible' : ''}`} style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: 22,

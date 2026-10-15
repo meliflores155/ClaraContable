@@ -1,10 +1,24 @@
+import { useScrollReveal } from '../../hooks/useScrollReveal'
+
 export default function CtaBand() {
+  const [ref, visible] = useScrollReveal()
   return (
     <section style={{
       background: '#e87722',
       padding: '56px 0',
       textAlign: 'center',
+      position: 'relative',
+      overflow: 'hidden',
     }}>
+      {/* Decorative shimmer */}
+      <div style={{
+        position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+        background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%)',
+        backgroundSize: '200% 100%',
+        animation: 'shimmer 4s linear infinite',
+        pointerEvents: 'none',
+      }} />
+      <div ref={ref} className={`reveal-scale ${visible ? 'visible' : ''}`} style={{ position: 'relative', zIndex: 1 }}>
       <div className="container">
         <h2 style={{
           fontFamily: "'Poppins', sans-serif",
@@ -58,6 +72,7 @@ export default function CtaBand() {
             <polyline points="12 5 19 12 12 19" />
           </svg>
         </a>
+      </div>
       </div>
     </section>
   )

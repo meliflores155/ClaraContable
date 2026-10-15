@@ -1,7 +1,9 @@
 import Button from '../atoms/Button'
 import { CONTACT } from '../../config/constants'
+import { useParallax } from '../../hooks/useScrollReveal'
 
 export default function Hero() {
+  const parallaxRef = useParallax(0.4)
   return (
     <section style={{
       background: 'linear-gradient(135deg, #1a3a6e 0%, #0f2a5c 50%, #0a1f4a 100%)',
@@ -13,8 +15,8 @@ export default function Hero() {
       display: 'flex',
       alignItems: 'center',
     }}>
-      {/* Background decorative elements */}
-      <div style={{
+      {/* Background decorative elements - animated */}
+      <div ref={parallaxRef} style={{
         position: 'absolute',
         top: -150,
         right: -150,
@@ -22,6 +24,7 @@ export default function Hero() {
         height: 500,
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(232,119,34,0.08) 0%, transparent 70%)',
+        animation: 'expandCircle 8s ease-in-out infinite',
       }} />
       <div style={{
         position: 'absolute',
@@ -31,6 +34,7 @@ export default function Hero() {
         height: 400,
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%)',
+        animation: 'driftUp 10s ease-in-out infinite',
       }} />
 
       {/* Subtle grid pattern */}
@@ -163,6 +167,7 @@ export default function Hero() {
             width: '100%',
             maxWidth: 420,
             boxShadow: '0 25px 60px rgba(0,0,0,0.3)',
+            animation: 'floatSlow 6s ease-in-out infinite',
           }}>
             {/* Header */}
             <div style={{

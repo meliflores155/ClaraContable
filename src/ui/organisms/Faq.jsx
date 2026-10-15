@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import SectionTitle from '../atoms/SectionTitle'
+import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const FAQ_ITEMS = [
   {
@@ -30,17 +31,28 @@ const FAQ_ITEMS = [
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null)
+  const [headerRef, headerVisible] = useScrollReveal()
+  const [listRef, listVisible] = useScrollReveal({ threshold: 0.1 })
 
   return (
-    <section id="faq" style={{ padding: '96px 0', background: '#fff' }}>
+    <section id="faq" style={{ padding: '96px 0', background: '#fff', position: 'relative', overflow: 'hidden' }}>
+      {/* Decorative */}
+      <div style={{
+        position: 'absolute', top: -60, right: -80, width: 280, height: 280, borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(26,58,110,0.04) 0%, transparent 70%)', pointerEvents: 'none',
+        animation: 'expandCircle 10s ease-in-out infinite',
+      }} />
+
       <div className="container">
+        <div ref={headerRef} className={`reveal ${headerVisible ? 'visible' : ''}`}>
         <SectionTitle
           tag="FAQ"
           title="Preguntas frecuentes"
           subtitle="Las respuestas a las dudas más comunes de mis clientes."
         />
+        </div>
 
-        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+        <div ref={listRef} className={`reveal-stagger ${listVisible ? 'visible' : ''}`} style={{ maxWidth: 720, margin: '0 auto' }}>
           {FAQ_ITEMS.map((item, i) => (
             <div key={i} style={{
               borderBottom: '1px solid #e5e7eb',

@@ -1,3 +1,5 @@
+import { useScrollReveal } from '../../hooks/useScrollReveal'
+
 const REASONS = [
   {
     title: 'Atención directa y personal',
@@ -43,6 +45,8 @@ const REASONS = [
 ]
 
 export default function WhyMe() {
+  const [headerRef, headerVisible] = useScrollReveal()
+  const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.1 })
   return (
     <section id="porque" style={{
       padding: '96px 0',
@@ -63,7 +67,7 @@ export default function WhyMe() {
         pointerEvents: 'none',
       }} />
 
-      {/* Decorative circles */}
+      {/* Decorative circles - animated */}
       <div style={{
         position: 'absolute',
         top: -100,
@@ -74,6 +78,7 @@ export default function WhyMe() {
         opacity: 0.06,
         borderRadius: '50%',
         pointerEvents: 'none',
+        animation: 'expandCircle 9s ease-in-out infinite',
       }} />
       <div style={{
         position: 'absolute',
@@ -85,11 +90,12 @@ export default function WhyMe() {
         opacity: 0.04,
         borderRadius: '50%',
         pointerEvents: 'none',
+        animation: 'driftUp 11s ease-in-out infinite 1s',
       }} />
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 64 }}>
+        <div ref={headerRef} className={`reveal ${headerVisible ? 'visible' : ''}`} style={{ textAlign: 'center', marginBottom: 64 }}>
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -136,7 +142,7 @@ export default function WhyMe() {
         </div>
 
         {/* Grid 2x2 */}
-        <div className="whyme-grid" style={{
+        <div ref={gridRef} className={`whyme-grid reveal-stagger ${gridVisible ? 'visible' : ''}`} style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: 24,

@@ -1,3 +1,5 @@
+import { useScrollReveal } from '../../hooks/useScrollReveal'
+
 export default function Includes() {
   const INCLUDES = [
     {
@@ -66,11 +68,27 @@ export default function Includes() {
     },
   ]
 
+  const [headerRef, headerVisible] = useScrollReveal()
+  const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.1 })
+  const [noteRef, noteVisible] = useScrollReveal()
+
   return (
-    <section style={{ padding: '88px 0', background: '#f7f9fc' }}>
+    <section style={{ padding: '88px 0', background: '#f7f9fc', position: 'relative', overflow: 'hidden' }}>
+      {/* Decorative elements */}
+      <div style={{
+        position: 'absolute', top: -80, left: -80, width: 300, height: 300, borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(26,58,110,0.05) 0%, transparent 70%)', pointerEvents: 'none',
+        animation: 'expandCircle 11s ease-in-out infinite',
+      }} />
+      <div style={{
+        position: 'absolute', bottom: -60, right: -60, width: 250, height: 250, borderRadius: '50%',
+        background: 'radial-gradient(circle, rgba(232,119,34,0.05) 0%, transparent 70%)', pointerEvents: 'none',
+        animation: 'driftUp 10s ease-in-out infinite 1s',
+      }} />
+
       <div className="container">
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: 56 }}>
+        <div ref={headerRef} className={`reveal ${headerVisible ? 'visible' : ''}`} style={{ textAlign: 'center', marginBottom: 56 }}>
           <div style={{
             display: 'inline-block',
             background: 'rgba(232,119,34,0.1)',
@@ -111,7 +129,7 @@ export default function Includes() {
         </div>
 
         {/* Grid */}
-        <div className="includes-grid" style={{
+        <div ref={gridRef} className={`includes-grid reveal-stagger ${gridVisible ? 'visible' : ''}`} style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: 24,
@@ -184,7 +202,7 @@ export default function Includes() {
         </div>
 
         {/* Bottom note */}
-        <div style={{
+        <div ref={noteRef} className={`reveal-scale ${noteVisible ? 'visible' : ''}`} style={{
           textAlign: 'center',
           marginTop: 40,
           padding: '24px 32px',

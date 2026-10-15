@@ -1,3 +1,5 @@
+import { useScrollReveal, useCounter } from '../../hooks/useScrollReveal'
+
 const INFO_CARDS = [
   {
     label: 'Formación',
@@ -57,6 +59,10 @@ const COLOR_STYLES = {
 }
 
 export default function About() {
+  const [photoRef, photoVisible] = useScrollReveal()
+  const [textRef, textVisible] = useScrollReveal()
+  const [cardsRef, cardsVisible] = useScrollReveal({ threshold: 0.1 })
+  const yearsCount = useCounter(10, 1800, photoVisible)
   return (
     <section id="sobre-mi" style={{
       padding: '100px 0',
@@ -64,7 +70,7 @@ export default function About() {
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Decorative elements */}
+      {/* Decorative elements - animated */}
       <div style={{
         position: 'absolute',
         top: -80,
@@ -74,6 +80,7 @@ export default function About() {
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(26,58,110,0.04) 0%, transparent 70%)',
         pointerEvents: 'none',
+        animation: 'expandCircle 10s ease-in-out infinite',
       }} />
       <div style={{
         position: 'absolute',
@@ -84,6 +91,7 @@ export default function About() {
         borderRadius: '50%',
         background: 'radial-gradient(circle, rgba(232,119,34,0.04) 0%, transparent 70%)',
         pointerEvents: 'none',
+        animation: 'driftUp 12s ease-in-out infinite 3s',
       }} />
 
       <div className="about-layout" style={{
@@ -99,7 +107,7 @@ export default function About() {
         zIndex: 1,
       }}>
         {/* Photo */}
-        <div style={{ flex: '0 1 400px', minWidth: 0, textAlign: 'center' }}>
+        <div ref={photoRef} className={`reveal-left ${photoVisible ? 'visible' : ''}`} style={{ flex: '0 1 400px', minWidth: 0, textAlign: 'center' }}>
           <div style={{ position: 'relative', display: 'inline-block' }}>
             {/* Decorative frame behind photo */}
             <div style={{
@@ -155,13 +163,14 @@ export default function About() {
               borderRadius: 14,
               boxShadow: '0 8px 24px rgba(232,119,34,0.35)',
               textAlign: 'center',
+              animation: 'pulseOrange 3s ease-in-out infinite',
             }}>
               <div style={{
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: 28,
                 fontWeight: 800,
                 lineHeight: 1,
-              }}>10+</div>
+              }}>{yearsCount}+</div>
               <div style={{
                 fontSize: 12,
                 fontWeight: 600,
@@ -174,7 +183,7 @@ export default function About() {
         </div>
 
         {/* Text */}
-        <div style={{ flex: '1 1 480px', minWidth: 0 }}>
+        <div ref={textRef} className={`reveal-right ${textVisible ? 'visible' : ''}`} style={{ flex: '1 1 480px', minWidth: 0 }}>
           {/* Badge */}
           <div style={{
             display: 'inline-flex',
@@ -241,7 +250,7 @@ export default function About() {
           </p>
 
           {/* Info cards 2x2 */}
-          <div className="about-info-grid" style={{
+          <div ref={cardsRef} className={`about-info-grid reveal-stagger ${cardsVisible ? 'visible' : ''}`} style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(2, 1fr)',
             gap: 16,
